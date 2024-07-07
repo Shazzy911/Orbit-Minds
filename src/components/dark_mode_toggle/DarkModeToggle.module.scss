@@ -1,0 +1,34 @@
+.container{
+    width: 42px;
+    height: 24px;
+    border: 1.5px solid #e84118;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .icon{
+    font-size: 12px;
+  }
+  
+  .ball{
+    width: 15px;
+    height: 15px;
+    // background-color: rgba(228, 17, 47, 0.7);
+    background-color: #e84118;
+    border-radius: 50%;
+    position: absolute;
+
+    
+  }
+  .ball.active {
+    right: 2px;
+  }
+  .ball:not(.active) {
+    left: 2px;
+  }
+
