@@ -1,3 +1,4 @@
+@import "../../app/styles/colors.module.scss";
 .container{
     display: flex;
     align-items: center;
@@ -9,7 +10,7 @@
         transition: .9s all ease;
         // color: white;
         &:hover{
-            color: rgba(228, 17, 47, 0.7);
+            color: $hover-color;
             cursor: pointer;
             -webkit-animation: vibrate-1 0.3s linear infinite both;
 	        animation: vibrate-1 0.3s linear infinite both;

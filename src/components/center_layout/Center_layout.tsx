@@ -5,15 +5,13 @@ import Link from "next/link";
 import { postProps } from "@/types/postList";
 import { FaClock } from "react-icons/fa6";
 import { BiSolidCategoryAlt } from "react-icons/bi";
-
-
-
-
+import { TextEffect } from "../textEffect/TextEffect";
+// import { TextEffect } from "@/src/components/textEffect/TextEffect";
 const fetchBlogPosts = async () => {
   // Using Function to fetching data in Server Component.....
   try {
     let response = await fetch("http://localhost:3000/api/blog", {
-      cache: "no-cache"
+      cache: "force-cache"
     });
     let data: postProps[] = await response.json();
     return data;
@@ -21,21 +19,23 @@ const fetchBlogPosts = async () => {
     throw new Error("Server is not Responding");
   }
 };
-
-
-const Center_layout = async ( ) => {
+``
+const Center_layout = async () => {
   let data: postProps[] = await fetchBlogPosts();
   return (
     <div className={style.container}>
       {data.map((value) => (
         <div className={style.blogCard} key={value.id}>
-          <Image
-            src={value.image || "@/images/post/post-lg/02.png"}
-            width={750}
-            height={450}
-            alt="Image Not found"
-            className={style.mainImage}
-          />
+          <Link href={`/blogs/${value._id}`}>
+            <Image
+              src={value.image || "@/images/post/post-lg/02.png"}
+              width={750}
+              height={450}
+              alt="Image Not found"
+              className={style.mainImage}
+            />
+          </Link>
+
           <div className={style.bloginfo}>
             <div className={style.headingBox}>
               <h1 className={style.heading}>
@@ -52,8 +52,8 @@ const Center_layout = async ( ) => {
                 <p >{value.category}</p>
               </span>
             </div>
-            <p className={style.mainDesc}>{value.desc}</p>
-            <Button text="Read More" href={`/blogs/${value._id}`}/>
+            <TextEffect per='char' preset='fade' className={style.mainDesc}>{value.desc}</TextEffect>
+            <Button text="Read More" href={`/blogs/${value._id}`} />
           </div>
         </div>
       ))}

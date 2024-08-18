@@ -4,7 +4,7 @@ import { postProps } from "@/types/postList";
 const getData = async ( id: string | number )=> {
   try {
     let response = await fetch(`http://localhost:3000/api/blog/${id}`, {
-      cache: "default",
+      cache: "force-cache",
     })
     let data = await response.json();
     return data;

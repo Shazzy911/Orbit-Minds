@@ -35,29 +35,29 @@ body {
 .theme{
   transition: 1s all ease;
 }
-.container {
+.main-content-container {
   display: flex;
 }
-.main-container {
-  width: 75vw;
-  // background-color: $primary-background-color1;
-  // p{
-  //   color: $paragraph-text-color1;
-  //   line-height: 1.5;
-  // }
-  // a{
-  //   color: $color-white-black1;
-  // }
-}
+// .main-container {
+//   width: 75vw;
+//   // background-color: $primary-background-color1;
+//   // p{
+//   //   color: $paragraph-text-color1;
+//   //   line-height: 1.5;
+//   // }
+//   // a{
+//   //   color: $color-white-black1;
+//   // }
+// }
 
 // ====================================
 // ============ Media Queries =========
 // ====================================
-@media screen and (max-width: 9920px) {
+@media screen and (max-width: 920px) {
   html{
     font-size: 59%;
   }
-  .main-container {
+  .content-wrapper {
     width: 100vw;
     // background-color: $primary-color;
   }
@@ -66,7 +66,7 @@ body {
   html{
     font-size: 53%;
   }
-  .main-container {
+  .content-wrapper {
     width: 100vw;
     // background-color: $primary-color;
   }
@@ -75,7 +75,7 @@ body {
   html{
     font-size: 49%;
   }
-  .main-container {
+  .content-wrapper {
     width: 100vw;
     // background-color: $primary-color;
   }
@@ -84,7 +84,7 @@ body {
   html{
     font-size: 47%;
   }
-  .main-container {
+  .content-wrapper {
     width: 100vw;
     // background-color: $primary-color;
   }
@@ -93,7 +93,7 @@ body {
   html{
     font-size: 43%;
   }
-  .main-container {
+  .content-wrapper {
     width: 100vw;
     // background-color: $primary-color;
   }

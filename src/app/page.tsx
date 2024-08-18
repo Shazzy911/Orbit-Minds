@@ -4,12 +4,12 @@ import Right_layout from "@/components/right_layout/Right_layout";
 
 const Page = () => {
   return (
-    <>
-      <div className={`${style.container} `}> 
+    
+      <main className={`${style.container} `}> 
         <Center_layout/>
         <Right_layout/>
-      </div>
-    </>
+      </main>
+    
   );
 };
 export default Page;

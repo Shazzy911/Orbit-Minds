@@ -11,5 +11,4 @@ const Right_layout = () => {
     </div>
   )
 }
-
 export default Right_layout;

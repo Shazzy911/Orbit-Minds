@@ -1,6 +1,8 @@
+@import "../../app/styles/colors.module.scss";
+
 .container {
   width: 75%;
-  margin-top: 7rem;
+  // margin-top: 5.5rem;
   padding: 0 3rem;
   .mainImage{
     &:hover {
@@ -36,10 +38,10 @@
     margin-bottom: 6rem;
   }
   .headingBox {
-    width: 63rem;
+    // width: 63rem;
     .heading {
       font-size: 2.2em;
-      margin: 0.5em 0;
+      margin: 2rem 0;
       line-height: 1.3;
 
       
@@ -48,7 +50,7 @@
         transition: 1s ease all;
         // color: white;
         &:hover {
-          color: #e84118;
+          color: $hover-color;
         }
       }
     }

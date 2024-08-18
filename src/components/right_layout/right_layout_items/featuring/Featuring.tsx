@@ -5,6 +5,7 @@ import Button from "@/components/buttons/Button";
 import { postProps } from "@/types/postList";
 import { FaClock } from "react-icons/fa6";
 import { BiSolidCategoryAlt } from "react-icons/bi";
+import Heading from "../heading/Heading";
 
 
 const getData = async () => {
@@ -23,7 +24,8 @@ const Featuring = async () => {
   return (
     <>
       <div className={style.container}>
-        <h1 className={style.mainHeading}>Featured Posts</h1>
+        <Heading heading="Featured Posts"/>
+        {/* <h1 className={style.mainHeading}>Featured Posts</h1> */}
         <div className={style.featuredCard}>
 
           {blogPost.map((data) => (

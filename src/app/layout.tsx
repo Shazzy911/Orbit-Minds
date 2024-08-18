@@ -1,11 +1,18 @@
 import React from "react";
 import "./styles/global.scss";
-import { Poppins } from "next/font/google";
+import { Poppins,  Noto_Sans } from "next/font/google";
+
 import Providers from "./redux/Providers"  // This is the Providers coming from Redux store...
 import TopBar from "@/components/top_bar/TopBar"; 
 import SideBar from "@/components/side_bar/SideBar";
 import Footer from "@/components/footer/Footer";
 const poppins = Poppins(
+  {
+    weight: "400",
+    subsets: ["latin"],
+  }
+);
+const noto_Sans = Noto_Sans(
   {
     weight: "400",
     subsets: ["latin"],
@@ -24,13 +31,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={noto_Sans.className}>
         {/* Here in Providers we're using Redux for the whole Application... */}
         <Providers>   
-          <div className="main2-container">
+          <div className="app-container">
             <TopBar />
-            <div className="container">
-              <div className="main-container">
+            <div className="main-content-container">
+              <div className="content-wrapper">
                 {children}
 
                 {/* Make research why are we using React.Fragment here... */}

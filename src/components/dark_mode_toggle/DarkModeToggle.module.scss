@@ -1,7 +1,8 @@
+@import "../../app/styles/colors.module.scss";
 .container{
     width: 42px;
     height: 24px;
-    border: 1.5px solid #e84118;
+    border: 1.5px solid $hover-color;
     border-radius: 30px;
     display: flex;
     align-items: center;
@@ -18,8 +19,7 @@
   .ball{
     width: 15px;
     height: 15px;
-    // background-color: rgba(228, 17, 47, 0.7);
-    background-color: #e84118;
+    background-color: $hover-color;
     border-radius: 50%;
     position: absolute;
 

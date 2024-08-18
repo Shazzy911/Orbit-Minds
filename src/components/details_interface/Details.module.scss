@@ -1,12 +1,12 @@
 .container {
     display: flex;
-    width: 58vw;
+    align-items: center;
     flex-direction: column;
     margin: 4.2rem 0;
     padding-left: 5rem;
     .mainImage {
-      height: 48rem;
-      width: 75rem;
+      height: 58rem;
+      width: 100rem;
       &:hover {
         cursor: pointer;
         /// Here we added the animation for the main-image
@@ -44,7 +44,7 @@
       // color: rgba(255, 255, 255, 0.5);
     }
     .privacyData {
-      width: 55vw;
+      width: 80vw;
       margin: 5rem 0.5rem 2rem 0.5rem;
   
       span {
@@ -73,6 +73,7 @@
     }
     .mainDesc {
       height: 25.9rem;
+      width: 100rem;
       background-color: #1d1c21;
       display: flex;
       justify-content: center;
