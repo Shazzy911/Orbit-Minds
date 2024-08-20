@@ -1,0 +1,34 @@
+// @import "./styles/colors.module.scss";
+.container{
+    display: flex;
+    padding: 0 1rem;
+    width: 100%;
+    margin-top: 5.5rem;
+ 
+}
+// .container {
+//   // background-color: $primary-background-color1;
+//   // color: $color-white-black1;
+
+  
+// }
+
+// @media screen and (max-width: 1000px) {
+//   .container{
+//     width: 100%;
+//   }
+// }
+@media screen and (max-width: 770px) {
+  .container{
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-left: 2.5rem;
+  }
+}
+@media screen and (max-width: 550px) {
+    .container{
+      padding-left: 0;
+      
+  
+    }
+  }
