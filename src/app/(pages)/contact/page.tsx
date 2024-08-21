@@ -1,13 +1,14 @@
-import SearchBar from "@/components/search_bar/SearchBar";
+import SearchBar from "@/components/ui/search_bar/SearchBar";
 import style from "./page.module.scss";
-import ContactForm from "@/components/contact_form/ContactForm";
+import ContactForm from "@/components/layout/contact_form/ContactForm";
+
 
 const Page = () => {
   return (
     <>
       <div className={style.container}>
         <SearchBar />
-        <ContactForm />
+        <ContactForm/>
       </div>
     </>
   );

@@ -1,6 +1,7 @@
-import SearchBar from "@/components/search_bar/SearchBar"
+import SearchBar from "@/components/ui/search_bar/SearchBar";
 import style from "./page.module.scss"
-import AboutInformation from "@/components/about_info/AboutInformation"
+import AboutInformation from "@/components/common/about_info/AboutInformation";
+
 
 
 
