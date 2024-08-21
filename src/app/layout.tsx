@@ -34,7 +34,7 @@ export default function RootLayout({
       <body className={noto_Sans.className}>
         {/* Here in Providers we're using Redux for the whole Application... */}
         <Providers>   
-          <div className="app-container">
+          <React.Fragment>
             <TopBar />
             <div className="main-content-container">
               <div className="content-wrapper">
@@ -47,7 +47,7 @@ export default function RootLayout({
               <SideBar />
               </div>
             </div>
-          </div>
+          </React.Fragment>
         </Providers>
       </body>
     </html>
