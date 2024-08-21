@@ -25,10 +25,10 @@
 // export default AboutInformation;
 
 
+import Privacy from "@/components/layout/privacy/Privacy";
 import style from "./AboutInformation.module.scss";
 import Profile from "@/images/author1.jpg";
 import Image from "next/image";
-import Privacy from "../privacy/Privacy";
 
 const AboutInformation = () => {
   return (
