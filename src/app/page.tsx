@@ -1,12 +1,15 @@
 import style from "./page.module.scss";
 import Center_layout from "@/components/layout/center_layout/Center_layout";
 import Right_layout from "@/components/layout/right_layout/Right_layout";
-
+import { Suspense } from "react";
 const Page = () => {
   return (
     
       <main className={`${style.container} `}> 
+
+        <Suspense fallback={<h1>Loading....</h1>}> 
         <Center_layout/>
+        </Suspense>
         <Right_layout/>
       </main>
     

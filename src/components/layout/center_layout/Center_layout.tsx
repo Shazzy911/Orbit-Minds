@@ -1,31 +1,18 @@
 import style from "./Center_layout.module.scss";
 import Image from "next/image";
-
 import Link from "next/link";
 import { postProps } from "@/types/postList";
 import { FaClock } from "react-icons/fa6";
 import { BiSolidCategoryAlt } from "react-icons/bi";
-// import { TextEffect } from "../textEffect/TextEffect";
+
 import Button from "@/components/ui/buttons/Button";
 import { TextEffect } from "@/components/ui/textEffect/TextEffect";
-// import { TextEffect } from "@/src/components/textEffect/TextEffect";
-const fetchBlogPosts = async () => {
-  // Using Function to fetching data in Server Component.....
-  try {
-    let response = await fetch("http://localhost:3000/api/blog", {
-      cache: "force-cache"
-    });
-    let data: postProps[] = await response.json();
-    return data;
-  } catch (error) {
-    throw new Error("Server is not Responding");
-  }
-};
-``
+import { FetchingData } from "@/actions/FetchingData";
+
 const Center_layout = async () => {
-  let data: postProps[] = await fetchBlogPosts();
+  let data: postProps[] = await FetchingData();
   return (
-    <div className={style.container}>
+    <section className={style.container}>
       {data.map((value) => (
         <div className={style.blogCard} key={value.id}>
           <Link href={`/blogs/${value._id}`}>
@@ -59,7 +46,7 @@ const Center_layout = async () => {
           </div>
         </div>
       ))}
-    </div>
+    </section>
   );
 };
 
