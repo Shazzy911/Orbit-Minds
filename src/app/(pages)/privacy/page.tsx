@@ -1,6 +1,6 @@
-import SearchBar from "@/components/search_bar/SearchBar";
+import SearchBar from "@/components/ui/search_bar/SearchBar";
 import style from "./page.module.scss";
-import Privacy from "@/components/privacy/Privacy";
+import Privacy from "@/components/layout/privacy/Privacy";
 const Page = () => {
   return (
     <>

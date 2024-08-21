@@ -1,4 +1,5 @@
-import Details from "@/components/details_interface/Details";
+
+import Details from "@/components/layout/details_interface/Details";
 import { postProps } from "@/types/postList";
 
 
